@@ -1,0 +1,414 @@
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos globales del documento */
+body {
+    background-color: #0d182c;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    /* Contenedor centralizado */
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.intro {
+    /* Caja de introducción con borde y efecto */
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid rgba(248, 255, 59, 0.56);
+    box-shadow: inset 0 0 15px rgba(248, 255, 59, 0.1);
+}
+
+/* Estilos para iconos SVG */
+svg {
+    display: block;
+    margin: auto;
+    transition: all 0.1s ease-in-out;
+}
+
+svg path {
+    transition: fill 0.1s ease-in-out;
+}
+
+svg:hover {
+    filter: drop-shadow(0 0 5px rgba(248, 255, 59, 0.8));
+    transform: scale(2.2);
+    transition: all 0.1s ease-in-out;
+}
+
+svg:hover path {
+    fill: #f8ff3b;
+}
+
+
+.intro p {
+    color: #f5f5f5;
+}
+
+.intro h3 {
+    color: #f8ff3b;
+    margin-top: 20px;
+}
+
+.intro h4 {
+    color: #00FF00; /* subtítulos en verde */
+    margin-top: 12px;
+}
+
+.intro p {
+    color: #ffffff; /* texto principal en blanco */
+}
+
+/* Estilos específicos para la sección frontend */
+#frontend .intro h3 {
+    color: #f8ff3b; /* mismo amarillo que el header */
+}
+
+#frontend .intro h4 {
+    color: #00FF00; /* subtítulos en verde */
+    margin-top: 12px;
+}
+
+#frontend .intro p {
+    color: #ffffff; /* texto principal en blanco */
+}
+
+#frontend .intro ol, #frontend .intro ul {
+    color: #ffffff;
+    margin-left: 1.2rem;
+}
+
+#frontend .intro code {
+    background: rgba(255,255,255,0.06);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+/* Cabecera principal */
+header {
+    background: linear-gradient(#0d182c 50%, #1b315ba2 );
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #f8ff3b;
+}
+
+header p {
+    font-size: 1.1rem;
+    font-weight: 350;
+    color: whitesmoke;
+}
+
+.barra {
+    /* Barra de navegación fija */
+    background-color:  #1b315ba2;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: #a9b136;
+    border-bottom-style: ridge;
+    border-bottom-width: 1px;
+    backdrop-filter: saturate(120%) blur(10px);
+}
+
+.barra .links {
+    /* Contenedor de los elementos de la navbar */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 120px; /* espacio reservado a la izquierda para el botón inicio */
+    height: 90px;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.barra .links li a, .barra .links li button.nav-btn {
+    /* Estilos compartidos para links y botones de la navbar */
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+    border-radius: 10px;
+    border: 2px solid rgba(248, 255, 59, 0.56);
+    box-shadow: inset 0 0 15px rgba(248, 255, 59, 0.1);
+    margin-right: 0; /* quitar separación global; usar posiciones individuales abajo */
+    background: transparent;
+    cursor: pointer;
+}
+
+.barra .links li a:hover, .barra .links li button.nav-btn:hover {
+    background-color: #147cbd18;
+    transform: scale(1.04);       /* tamaño al pasar el mouse */
+    transform-origin: center;
+    font-weight: bold;
+    color: #f8ff3b;
+        box-shadow: 
+        inset 0 0 15px rgba(248, 255, 59, 0.6),
+        0 0 25px rgba(248, 255, 59, 0.4);
+}
+
+/* Espaciado para secciones */
+section {
+    padding: 40px 0;
+}
+
+
+/* Títulos de sección */
+h2 {
+    color: white;
+    margin-bottom: 20px;
+    border-left: 7px solid #f8ff3b;
+    padding-left: 10px;
+}
+
+
+.cards {
+    /* Grid de tarjetas (cards) */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    /* Tarjeta individual */
+    position: relative;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 2px solid rgba(248, 255, 59, 0.56);
+}
+
+.card .card-bg {
+    /* Imagen de fondo dentro de la tarjeta */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.4);
+    align-content: center;
+}
+
+.card:hover .card-bg {
+    filter: brightness(0.5);
+}
+
+
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: #111f398b;
+    box-shadow: 
+        inset 0 0 15px rgba(248, 255, 59, 0.6),
+        0 0 20px rgba(248, 255, 59, 0.8),
+        0 0 40px rgba(248, 255, 59, 0.4);
+}
+
+.card-content {
+    /* Contenido dentro de la tarjeta */
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(13, 24, 44, 0.8));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: flex-start;
+    
+}
+
+.card-content:hover {
+    cursor: default;
+    background: linear-gradient(transparent, rgba(13, 24, 44, 0.0));
+
+}
+
+
+
+.card h3 {
+    margin-top: 10px;
+    color: #c1c632;
+    margin-bottom: 10px;
+}
+
+.card p {
+
+    margin-top: auto; 
+    margin-bottom: auto;
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: large;
+
+}
+
+.card h3, .card p {
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.btn {
+    /* Botón en cards: contorno neón y fondo transparente */
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 15px;
+    text-align: center;
+    width: fit-content;
+    border-color: #f8ff3b;
+    border-style: solid;
+    border-width: 0.1em;
+    padding: 10px 20px;;
+    background: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    color: inherit;
+    margin-bottom: 20px;
+}
+
+
+
+.btn:hover {
+    background: #14548558;
+    color: #f8ff3b;
+    box-shadow: 
+        inset 0 0 5px rgba(248, 255, 59, 0.6),
+        0 0 5px rgba(248, 255, 59, 0.8),
+        0 0 10px rgba(248, 255, 59, 0.4);
+    font-weight: bold;
+
+}
+
+.btn:hover p {
+    color: #f8ff3b;
+}
+
+/* Prevent global SVG hover animation from affecting navbar icon */
+.barra svg, .barra .links li button.nav-btn svg {
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* Move the first item a bit to the left and separate from the others */
+.barra .links li:first-child {
+    position: absolute;
+    left: 1350px; /* casi pegado al borde pero con un pequeño espacio */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Posicionamiento individual para los demás botones
+   Edita los valores `left` abajo para mover cada botón por píxeles. */
+.barra .links li:nth-child(2) {
+    position: absolute;
+    left: 280px; /* cambia este valor para mover el segundo botón(frontend) */
+    top: 50%;
+    transform: translateY(-50%);
+}
+.barra .links li:nth-child(3) {
+    position: absolute;
+    left: 556px; /* cambia este valor para mover el tercer botón (backend) */
+    top: 50%;
+    transform: translateY(-50%);
+}
+.barra .links li:nth-child(4) {
+    position: absolute;
+    left: 830px; /* cambia este valor para mover el cuarto botón(seguridad e implementación) */
+    top: 50%;
+    transform: translateY(-50%);
+}
+.barra .links li:nth-child(5) {
+    position: absolute;
+    left: 1140px; /* cambia este valor para mover el quinto botón(contacto) */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .barra .links {
+        justify-content: flex-start;
+        padding-left: 20px; /* menos espacio en pantallas medianas */
+        height: auto;
+    }
+    .barra .links li:first-child { position: static; transform: none; margin-right: 18px; }
+    /* Resetear posicionamiento individual en pantallas medianas */
+    .barra .links li:nth-child(2), .barra .links li:nth-child(3), .barra .links li:nth-child(4), .barra .links li:nth-child(5) {
+        position: static; transform: none; margin-right: 18px;
+    }
+    .barra .links li a, .barra .links li button.nav-btn {
+        padding: 12px 14px;
+        margin-right: 12px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .barra .links {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 8px;
+        padding: 8px;
+    }
+    .barra .links li:first-child { position: static; margin-right: 18px; }
+    .barra .links li:nth-child(2), .barra .links li:nth-child(3), .barra .links li:nth-child(4), .barra .links li:nth-child(5) {
+        position: static; margin-right: 18px;
+    }
+    .barra .links li a, .barra .links li button.nav-btn {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+footer {
+    background-color: #1b315ba2;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: #a9b136;
+    border-top-style: ridge;
+    border-top-width: 1px;
+}
+
+hr {
+
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin-bottom: 30px;
+}
+
