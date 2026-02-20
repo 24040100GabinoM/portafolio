@@ -1,0 +1,118 @@
+<!-- Documento HTML principal -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Frameworks - Abner Torres</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <!-- Header: título y datos de los autores -->
+    <header>
+        <div class="container">
+            <h1>Portafolio Frameworks</h1>
+            <p><strong>Alumnos:</strong> Abner Josias Torres Velez - Gabino Martinez Delgado</p>
+            <p>TI Entornos Virtuales Negocios Digitales | 5EVND-A | Frameworks para Desarrollo Web</p>
+        </div>
+    </header>
+
+    <!-- Navbar: botones de navegación (están como <button> para usar JS después) -->
+    <nav class="barra">
+        <ul class ="links">
+            <li><button class="nav-btn" data-target="inicio"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35px" height="35px">
+  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" fill="#f5f5f5"/>
+</svg></button></li>
+            <li><button class="nav-btn" data-target="frontend">Proceso de Desarrollo de Frontend</button></li>
+            <li><button class="nav-btn" data-target="backend">Proceso de Desarrollo de Backend</button></li>
+            <li><button class="nav-btn" data-target="seguridad">Proceso de Seguridad e Implementación</button></li>
+            <li><button class="nav-btn" data-target="informacion">Contacto</button></li>
+        </ul>
+    </nav>
+
+    <!-- Sección: inicio (ancla "inicio") -->
+    <section id="inicio" class="container">
+        <h2>Bienvenido</h2>
+        <div class="intro">
+            <p>Bienvenido al Portafolio de Evidencias, una aplicación web desarrollada para presentar de forma clara y estructurada los conocimientos
+               adquiridos en la materia de Frameworks para Desarrollo Web. Este sitio reúne los principales procesos, conceptos y prácticas aplicadas
+               durante el desarrollo de aplicaciones web modernas.</p>
+            <h3>¿Qué aprenderas?</h3>
+            <p>En este portafolio aprenderás los procesos fundamentales del desarrollo de aplicaciones web mediante el uso de frameworks modernos, 
+               integrando frontend, backend y principios de seguridad. El contenido está enfocado en la aplicación de buenas prácticas y metodologías
+               utilizadas en entornos reales de desarrollo.</p>
+            <h3>Objetivo del proyecto</h3>
+            <p>El objetivo de este proyecto es desarrollar un portafolio de evidencias en forma de aplicación web que documente el aprendizaje adquirido en la
+               materia de Frameworks para Desarrollo Web. A través de su estructura y contenidos, se busca demostrar el uso adecuado de herramientas, procesos 
+               y buenas prácticas del desarrollo web.</p>
+        </div>
+    </section>
+
+    <!-- Sección: frontend (ancla "frontend") -->
+    <section id="frontend" class="container">
+        <hr>
+        <h2>Desarrollo Frontend</h2>
+        <!-- Información de la unidad movida al componente específico (VueJS/fd_unidad1.js) -->
+
+        <div class="cards">
+            <div class="card">
+                <img src="images/frontimg.png" alt="Fondo" class="card-bg">
+                <div class="card-content">
+                <!-- Card: Unidad 1 frontend -->
+                <h3>Unidad 1: Proceso de Desarrollo de Frontend</h3>
+                <p>Esta unidad aborda el diseño y construcción de interfaces web utilizando frameworks frontend,
+                   aplicando principios de diseño responsivo, experiencia de usuario y buenas prácticas de desarrollo.</p>
+                <button type="button" class="btn card-btn" data-target="frontend"><p>Ver Enlace</p></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: backend (ancla "backend") -->
+    <section id="backend" class="container">
+        <hr>
+        <h2>Desarrollo Backend</h2>
+        <div class="cards">
+            <div class="card">
+            <div class="card">
+                <img src="images/backimg.png" alt="Fondo" class="card-bg">
+                <div class="card-content">
+                <!-- Card: Unidad 2 backend -->
+                <h3>Unidad 2: Proceso de Desarrollo Backend</h3>
+                <p>En esta unidad se describen los procesos relacionados con la lógica del servidor,
+                   la gestión de datos y la comunicación entre el frontend y el backend mediante tecnologías web.</p>
+                <button type="button" class="btn card-btn" data-target="backend"><p>Ver Enlace</p></button>
+                </div>
+        </div>
+    </section>
+
+     <!-- Sección: seguridad (ancla "seguridad") -->
+     <section id="seguridad" class="container">
+        <hr>
+        <h2>Seguridad e Implementación</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="images/seguimg.png" alt="Fondo" class="card-bg">
+                <div class="card-content">
+                <!-- Card: Unidad 3 seguridad -->
+                <h3>Unidad 3: Proceso de Desarrollo de Seguridad e implementacion</h3>
+                <p>Esta unidad se enfoca en la aplicación de medidas básicas de seguridad,
+                   así como en los procesos de implementación y despliegue de aplicaciones
+                   web en servicios de hosting.</p>
+                <button type="button" class="btn card-btn" data-target="seguridad"><p>Ver Enlace</p></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: créditos y materia -->
+    <footer>
+        <p>Abner Josias Torres Velez | Gabino Martinez Delgado | Universidad Tecnológica de Coahuila (UTC)</p>
+        <p>Materia: Frameworks | 5to Cuatrimestre</p>
+    </footer>
+
+        <script src="JS/logica.js"></script>
+
+    </body>
+    </html>
